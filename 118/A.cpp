@@ -4,7 +4,7 @@ int main()
 {
     string phrase;
     string result;
-    set<char> vowels = {'A', 'E', 'I', 'O', 'U', 'Y', 'a', 'e', 'i', 'o', 'u', 'y'};
+    unordered_set<char> vowels = {'A', 'E', 'I', 'O', 'U', 'Y', 'a', 'e', 'i', 'o', 'u', 'y'};
     cin >> phrase;
 
     for(char c: phrase){
