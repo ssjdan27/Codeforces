@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    string s;
+    cin >> s;
+    int n = s.length();
+    vector<int> cnt(2, 0);
+
+    for (char c : s) {
+        cnt[c - '0']++;
+    }
+
+    for (int i = 0; i <= n; i++) {
+        if (i == n || cnt[1 - (s[i] - '0')] == 0) {
+            cout << n - i << "\n";
+            return;
+        }
+        cnt[1 - (s[i] - '0')]--;
+    }
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
