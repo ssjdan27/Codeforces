@@ -4,11 +4,7 @@ using namespace std;
 void solve() {
     string s;
     cin >> s;
-    s.pop_back();
-    s.pop_back();
-    s += "i";
-
-    cout << s << "\n";
+    cout << s.substr(0, s.length() - 2) << "i" << "\n";
 }
 
 int main() {
