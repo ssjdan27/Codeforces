@@ -10,19 +10,12 @@ void solve()
         cin >> nums[i];
     }
     sort(nums.begin(), nums.end(), greater<int>());
-    swap(nums[1], nums[nums.size() - 1]);
-    int leftSum = 0;
-
-    for (int num : nums)
+    if (nums[0] == nums[nums.size() - 1])
     {
-        if (leftSum == num)
-        {
-            cout << "NO\n";
-            return;
-        }
-
-        leftSum += num;
+        cout << "NO\n";
+        return;
     }
+    swap(nums[1], nums[nums.size() - 1]);
 
     cout << "YES\n";
     for (int i = 0; i < n; i++)
