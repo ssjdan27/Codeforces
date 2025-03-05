@@ -9,13 +9,13 @@ void solve()
     {
         cin >> nums[i];
     }
-    sort(nums.begin(), nums.end(), greater<int>());
     if (nums[0] == nums[nums.size() - 1])
     {
         cout << "NO\n";
         return;
     }
-    swap(nums[1], nums[nums.size() - 1]);
+    swap(nums[0], nums[nums.size() - 1]);
+    swap(nums[nums.size()-1], nums[1]);
 
     cout << "YES\n";
     for (int i = 0; i < n; i++)
