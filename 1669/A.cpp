@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve() {
+  int r;
+  cin >> r;
+  if (r <= 1399) {
+    cout << "Division 4\n";
+  } else if (r <= 1599) {
+    cout << "Division 3\n";
+  } else if (r <= 1899) {
+    cout << "Division 2\n";
+  } else {
+    cout << "Division 1\n";
+  }
+}
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  int t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
+  return 0;
+}
